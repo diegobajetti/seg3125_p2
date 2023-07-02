@@ -20,7 +20,6 @@
 .navbar-logo {
   color: #fff;
   justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -72,6 +71,7 @@
 
 .menu-icon {
   display: none;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 960px) {
