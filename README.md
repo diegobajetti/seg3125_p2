@@ -65,7 +65,7 @@ This repository uses the [`gh-pages`][gh-pages] `npm` package to build and deplo
       - Folder: `/ (root)`
 1. Click on the "Save" button
 
-   The [`gh-pages`][gh-pages] package will deploy the application to the specified [URL](#2-add-a-homepage-property-to-the-packagejson-file) whenever the `npm run deploy` command is executed. A [GitHub action][github-action] links the GitHub page with the source files in the `gh-pages` branch once the command is executed successfully.
+The [`gh-pages`][gh-pages] package will deploy the application to the specified [URL](#2-add-a-homepage-property-to-the-packagejson-file) whenever the `npm run deploy` command is executed. Once the command is executed successfully, a [GitHub workflow][github-action] links the GitHub page with the source files in the `gh-pages` branch.
 
 [live-website]: https://diegobajetti.github.io/seg3125_p2.github.io/
 [gh-pages]: https://www.npmjs.com/package/gh-pages
