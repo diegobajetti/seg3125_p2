@@ -18,6 +18,7 @@ This repository uses a GitHub Pages `npm` package in React to display a static w
 
 1. Open the `package.json` file in a text editor.
 1. Add a [`homepage`][commit-example] property.
+
    ```diff
    {
      "name": "seg3125_p2.github.io",
@@ -26,12 +27,14 @@ This repository uses a GitHub Pages `npm` package in React to display a static w
      [...]
    }
    ```
+
    > The `homepage` property should follow this format `http://{github_username}.github.io/{repo-name}`
 
 ### 3. Add deployment scripts to the `package.json` file
 
 1. Open the `package.json` file in a text editor.
 1. Add a `predeploy` and `deploy` property.
+
    ```diff
    "scripts": {
      "start": "react-scripts start",
@@ -44,9 +47,11 @@ This repository uses a GitHub Pages `npm` package in React to display a static w
 ### 4. Deploy the React app
 
 1. Push the app to the GitHub repository.
+
    ```shell
    $ npm run deploy
    ```
+
    At this point, the `predeploy` and `deploy` scripts will run, which will in turn push a distributable version of the app to a new commit in the `gh-pages` branch in the repository.
 
 ### 5. Configure GitHub Pages
