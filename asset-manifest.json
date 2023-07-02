@@ -1,9 +1,13 @@
 {
-  "main.css": "static/css/main.d845ed5e.css",
-  "main.css.map": "static/css/main.d845ed5e.css.map",
-  "main.js": "static/js/main.896c727e.js",
-  "main.js.map": "static/js/main.896c727e.js.map",
-  "static/js/0.66be1d18.chunk.js": "static/js/0.66be1d18.chunk.js",
-  "static/js/0.66be1d18.chunk.js.map": "static/js/0.66be1d18.chunk.js.map",
-  "static/media/logo.svg": "static/media/logo.06e73328.svg"
+  "main.css": "/seg3125_p2.github.io/static/css/main.73939e14.chunk.css",
+  "main.js": "/seg3125_p2.github.io/static/js/main.1ed9c8b8.chunk.js",
+  "main.js.map": "/seg3125_p2.github.io/static/js/main.1ed9c8b8.chunk.js.map",
+  "runtime~main.js": "/seg3125_p2.github.io/static/js/runtime~main.0b1c3cc5.js",
+  "runtime~main.js.map": "/seg3125_p2.github.io/static/js/runtime~main.0b1c3cc5.js.map",
+  "static/js/2.a676d882.chunk.js": "/seg3125_p2.github.io/static/js/2.a676d882.chunk.js",
+  "static/js/2.a676d882.chunk.js.map": "/seg3125_p2.github.io/static/js/2.a676d882.chunk.js.map",
+  "index.html": "/seg3125_p2.github.io/index.html",
+  "precache-manifest.fb613679d5bf79b9531e9800393687cf.js": "/seg3125_p2.github.io/precache-manifest.fb613679d5bf79b9531e9800393687cf.js",
+  "service-worker.js": "/seg3125_p2.github.io/service-worker.js",
+  "static/css/main.73939e14.chunk.css.map": "/seg3125_p2.github.io/static/css/main.73939e14.chunk.css.map"
 }
