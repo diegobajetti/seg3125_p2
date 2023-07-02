@@ -1,18 +1,18 @@
 # SEG3125 Project 2 — PyCodeX
 
-This repository uses a GitHub Pages `npm` package in React to display a static website. You can navigate to [this link][live-website] to see a live, interactive version of the website.
+This repository uses the [`gh-pages`][gh-pages] `npm` package to build and deploy a React application. See a live, interactive version of the website [here][live-website].
 
 ## Getting Started: [`gh-pages`][gh-pages]
 
 ### 1. Install the `gh-pages` `npm` package
 
-1. First, install the package specified above by executing the following command.
+1. Install the package specified above by executing the following command.
 
    ```shell
    $ npm install gh-pages --save
    ```
 
-   > In the [official documentation][gh-pages] of the package, it is recommended to install the `npm` package as a development dependency; however, this can be problematic, at least in my personal experience. Instead of deploying the distributable version of the React app, it will assume the `README.md` to be the root of the deployable app.
+   > In the [official documentation][gh-pages], it recommends installing the `npm` package as a development dependency; however, this can be problematic, at least in my personal experience. Instead of deploying the distributable version of the website, it will assume the `README.md` file to be the root of the app.
 
 ### 2. Add a `homepage` property to the `package.json` file
 
@@ -52,11 +52,11 @@ This repository uses a GitHub Pages `npm` package in React to display a static w
    $ npm run deploy
    ```
 
-   By executing the command above, the `predeploy` and `deploy` scripts will run and the React app will be deployed. Internally, the `predeploy` script creates a distributable version of the app and the `build` script pushes the compiled app to a commit in the newly created `gh-pages` branch.
+   By executing the command above, the `predeploy` and `deploy` scripts will run and the React app will be deployed. Internally, the `predeploy` script creates a distributable version of the app and the `build` script pushes the compiled app to a commit in the `gh-pages` branch.
 
 ### 5. Configure GitHub Pages
 
-1. Under your repository name, click **Settings**.
+1. Under the repository name, click **Settings**.
 1. In the "Code and automation" section of the sidebar, click **Pages**.
 1. Configure the "Build and deployment" settings as follows:
    1. **Source**: Deploy from a branch
@@ -65,7 +65,7 @@ This repository uses a GitHub Pages `npm` package in React to display a static w
       - Folder: `/ (root)`
 1. Click on the "Save" button
 
-At last, the [`gh-pages`][gh-pages] package will deploy a GitHub Pages application to the specified [URL](#2-add-a-homepage-property-to-the-packagejson-file). A [GitHub action][github-action] builds and deploys the GitHub page automatically any time a new commit is pushed to the `master` branch.
+   The [`gh-pages`][gh-pages] package will deploy the application to the specified [URL](#2-add-a-homepage-property-to-the-packagejson-file) whenever the `npm run deploy` command is executed. A [GitHub action][github-action] links the GitHub page with the source files in the `gh-pages` branch once the command is executed successfully.
 
 [live-website]: https://diegobajetti.github.io/seg3125_p2.github.io/
 [gh-pages]: https://www.npmjs.com/package/gh-pages
