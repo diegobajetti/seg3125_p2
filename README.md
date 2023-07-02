@@ -28,7 +28,7 @@ This repository uses a GitHub Pages `npm` package in React to display a static w
    }
    ```
 
-   > The `homepage` property should follow this format `http://{github_username}.github.io/{repo-name}`
+   > The `homepage` property should follow this format: `http://{github_username}.github.io/{repo-name}`
 
 ### 3. Add deployment scripts to the `package.json` file
 
