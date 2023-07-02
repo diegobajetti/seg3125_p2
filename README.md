@@ -67,6 +67,6 @@ This repository uses a GitHub Pages `npm` package in React to display a static w
 
 At last, the [`gh-pages`][gh-pages] package is installed correctly and will deploy a GitHub pages application to the specified [URL][live-website].
 
-[live-website]: https://diegobajetti.github.io/seg3125_p1s3.github.io/
+[live-website]: https://diegobajetti.github.io/seg3125_p2.github.io/
 [gh-pages]: https://www.npmjs.com/package/gh-pages
 [commit-example]: https://github.com/diegobajetti/seg3125_p2.github.io/commit/f5925299bc25cc1397e1c41f1858c7930c491717
