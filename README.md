@@ -65,7 +65,7 @@ This repository uses a GitHub Pages `npm` package in React to display a static w
       - Folder: `/ (root)`
 1. Click on the "Save" button
 
-At last, the [`gh-pages`][gh-pages] package will deploy a GitHub Pages application to the specified [URL](#2-add-a-homepage-property-to-the-packagejson-file-homepage). A [GitHub action][github-action] builds and deploys the GitHub page automatically any time a new commit is pushed to the `master` branch.
+At last, the [`gh-pages`][gh-pages] package will deploy a GitHub Pages application to the specified [URL](#2-add-a-homepage-property-to-the-packagejson-file). A [GitHub action][github-action] builds and deploys the GitHub page automatically any time a new commit is pushed to the `master` branch.
 
 [live-website]: https://diegobajetti.github.io/seg3125_p2.github.io/
 [gh-pages]: https://www.npmjs.com/package/gh-pages
