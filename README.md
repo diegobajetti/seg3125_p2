@@ -17,7 +17,7 @@ This repository uses the [`gh-pages`][gh-pages] `npm` package to build and deplo
 ### 2. Add a `homepage` property to the `package.json` file
 
 1. Open the `package.json` file in a text editor.
-1. Add a [`homepage`][package-json-example] property.
+1. Add a [`homepage`][package-json-homepage] property.
 
    ```diff
    {
@@ -33,7 +33,7 @@ This repository uses the [`gh-pages`][gh-pages] `npm` package to build and deplo
 ### 3. Add deployment scripts to the `package.json` file
 
 1. Open the `package.json` file in a text editor.
-1. Add a [`predeploy`][package-json-example] and [`deploy`][package-json-example] property.
+1. Add a [`predeploy`][package-json-predeploy] and [`deploy`][package-json-deploy] property.
 
    ```diff
    "scripts": {
@@ -69,5 +69,7 @@ The [`gh-pages`][gh-pages] package will deploy the application to the specified 
 
 [live-website]: https://diegobajetti.github.io/seg3125_p2.github.io/
 [gh-pages]: https://www.npmjs.com/package/gh-pages
-[package-json-example]: https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/package.json
-[github-action]: https://github.com/diegobajetti/seg3125_p2.github.io/actions/runs/5434796911
+[package-json-homepage]: https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/package.json#L4
+[package-json-predeploy]: https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/package.json#L24
+[package-json-deploy]: https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/package.json#L25
+[github-action]: https://github.com/diegobajetti/seg3125_p2.github.io/actions
