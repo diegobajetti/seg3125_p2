@@ -8,8 +8,8 @@ This repository uses the [`gh-pages`][gh-pages] `npm` package to build and deplo
 
 1. Install the package specified above by executing the following command.
 
-   ```shell
-   $ npm install gh-pages --save
+   ```bash
+   npm install gh-pages --save
    ```
 
    > In the [official documentation][gh-pages], it recommends installing the `npm` package as a development dependency; however, this can be problematic, at least in my personal experience. Instead of deploying the distributable version of the website, it will assume the `README.md` file to be the root of the app.
@@ -48,8 +48,8 @@ This repository uses the [`gh-pages`][gh-pages] `npm` package to build and deplo
 
 1. Push the app to the GitHub repository.
 
-   ```shell
-   $ npm run deploy
+   ```bash
+   npm run deploy
    ```
 
    By executing the command above, the `predeploy` and `deploy` scripts will run and the React app will be deployed. Internally, the `predeploy` script creates a distributable version of the app and the `build` script pushes the compiled app to a commit in the `gh-pages` branch.
@@ -71,14 +71,14 @@ The [`gh-pages`][gh-pages] package will deploy the application to the specified 
 
 ### `README.md` file as website
 
-During the initial [`gh-pages`][gh-pages] set up, the package will build the app based on the default GitHub Pages configuration since the `gh-pages` branch has not yet been created. Additionally, GitHub Pages first parses the target branch (`master` by default) for a `index.html`, `index.md`, or `README.md` file<sup>&#91;[1](github-pages-doc)&#93;</sup>, utilizing this file to display the site. Upon creating a React app with the `npx create-react-app` command, a `README.md` file is created and, consequently, is regarded as the source file. The `gh-pages` branch is created _after_ the application is deployed for the first time, and only then the GitHub Pages configuration can be changed to deploy the application against the `gh-pages` branch. After completing [this](#5-configure-github-pages) step, deploy the application to force GitHub Pages to use the correct branch.
+On the first deployment of the app, the package builds the site based on the default GitHub Pages configuration. GitHub Pages displays the site by parsing the target branch (`master` by default) and identifying a source file (e.g., `index.html`, `index.md`, or `README.md`<sup>&#91;[1][github-pages-doc]&#93;</sup>). Upon creating a React app with the `npx create-react-app` command, a `README.md` file is generated and, consequently, regarded as the source file for the site. The `gh-pages` branch is available _after_ the application is built for the first time, and only then the GitHub Pages configuration can be changed in order to display the correct site. After completing step [5](#5-configure-github-pages) above, deploy the application against the `gh-pages` branch.
 
 ### Broken Media Display
 
 More than likely, images and/or videos will not render in the deployed site using common `src` linking:
 
 ```html
-<img src="./images/img.jpg" />
+<img src="./images/img-1.jpg" />
 ```
 
 Since the website is deployed under the [`homepage`](#2-add-a-homepage-property-to-the-packagejson-file) URL, it will not recognize the source file for the image or video using local pathing. To overcome this, follow the steps below to change all `src` linking, depending on the use case.
@@ -115,29 +115,50 @@ Since the website is deployed under the [`homepage`](#2-add-a-homepage-property-
      1. Change the format of the `src` attribute.
 
         ```html
-        <video src={"./seg3125_p2.github.io/videos/video-0.mp4"}/>
+        <video src={"./seg3125_p2.github.io/videos/video-1.mp4"}/>
         ```
 
         > The `src` attribute's value should follow this format: `{"./<repo_name>/<file_path>"}`
+
+     Alternatively, run the following two commands to match the three cases above:
+
+     ```sh
+     cd $(git rev-parse --show-cdup)/src
+     ```
+
+     ```sh
+     grep -RIlxP --exclude=\*.{json,md} --include=\*.{html,css,js} '^.*\b(?:src=|background\-image:).*$'
+     ```
+
+     `grep` is a utility for searching strings through multiple text files. Here, it is invoked with the following parameters:
+
+     - `R` — reads all files under each directory, recursively, across all symbolic links
+     - `I` — ignore binary files; process a binary file as if it did not contain matching data
+     - `l` — print the name of each file for which a match was found
+     - `x` — select only those matches that exactly match the whole line
+     - `P` — interpret patterns as Perl-compatible regular expressions (PCREs)
+     - `--exclude=` — skip any command-line file with a name suffix that matches the pattern
+     - `--include=` — search only files whose base name matches the pattern
+     - Regex — find an explanation for the regular expression [here][regex-example]
 
 1. Create a `.env` file
 
    1. Navigate to the root of the project.
 
-      ```shell
-      $ git rev-parse --show-toplevel
+      ```bash
+      cd $(git rev-parse --show-cdup)
       ```
 
    1. Create a `.env` file.
 
-      ```shell
-      $ touch .evn
+      ```bash
+      touch .env
       ```
 
    1. Add the following property.
 
-      ```shell
-      $ echo "PUBLIC_URL=." >> .evn
+      ```bash
+      echo "PUBLIC_URL=." >> .env
       ```
 
 Push these changes to the remote repository and [deploy](#4-deploy-the-react-app) the application. This is not a foolproof method as it requires any `img` and `video` tags to be changed back in order to render the images when running locally. Additionally, it is **important** that these changes are not pushed to the remote repository, and to reference the external repository _before_ [deploying](#4-deploy-the-react-app). That is, change all references to image/video files anytime the application is deployed to the remote as shown above, and back to their original values when running locally.
@@ -149,3 +170,4 @@ Push these changes to the remote repository and [deploy](#4-deploy-the-react-app
 [package-json-deploy]: https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/package.json#L25
 [github-action]: https://github.com/diegobajetti/seg3125_p2.github.io/actions
 [github-pages-doc]: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site
+[regex-example]: https://regex101.com/r/iUYcBT/1
