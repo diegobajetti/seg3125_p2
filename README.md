@@ -85,40 +85,40 @@ Since the website is deployed under the [`homepage`](#2-add-a-homepage-property-
 
 1. Diagnose the type of media.
 
-   - _Background Image_
+   1. _Background Image_
 
-     1. Open the `.css` file that imports an image with the `background-image` property.
-     1. Change the format of the `url()` value.
+      1. Open the `.css` file that imports an image with the `background-image` property.
+      1. Change the format of the `url()` value.
 
-        ```css
-        * {
-          background-image: url("https://diegobajetti.github.io/seg3125_p2.github.io/images/img-1.jpg");
-        }
-        ```
+         ```css
+         * {
+           background-image: url("https://diegobajetti.github.io/seg3125_p2.github.io/images/img-1.jpg");
+         }
+         ```
 
-        > The `url()` value should follow this format: `https://{github_username}.github.io/{repo_name}/{file_path}`
+         > The `url()` value should follow this format: `https://{github_username}.github.io/{repo_name}/{file_path}`
 
-   - _Image Tag_
+   1. _Image Tag_
 
-     1. Open the `.html` file that utilizes the `<img/>` tag.
-     1. Change the format of the `src` attribute.
+      1. Open the `.html` file that utilizes the `<img/>` tag.
+      1. Change the format of the `src` attribute.
 
-        ```html
-        <img src="./seg3125_p2.github.io/images/img-1.jpg" />
-        ```
+         ```html
+         <img src="./seg3125_p2.github.io/images/img-1.jpg" />
+         ```
 
-        > The `src` attribute's value should follow this format: `./{repo_name}/{file_path}`
+         > The `src` attribute's value should follow this format: `./{repo_name}/{file_path}`
 
-   - _Background Video_
+   1. _Background Video_
 
-     1. Open the `.html` file that utilizes the `<video/>` tag.
-     1. Change the format of the `src` attribute.
+      1. Open the `.html` file that utilizes the `<video/>` tag.
+      1. Change the format of the `src` attribute.
 
-        ```html
-        <video src={"./seg3125_p2.github.io/videos/video-1.mp4"}/>
-        ```
+         ```html
+         <video src={"./seg3125_p2.github.io/videos/video-1.mp4"}/>
+         ```
 
-        > The `src` attribute's value should follow this format: `{"./<repo_name>/<file_path>"}`
+         > The `src` attribute's value should follow this format: `{"./<repo_name>/<file_path>"}`
 
    Alternatively, run the following two commands to match the three cases above:
 
