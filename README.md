@@ -75,17 +75,15 @@ During the initial [`gh-pages`][gh-pages] set up, the package will build the app
 
 ### Broken Media Display
 
-More than likely, images placed under the `/public` directory will not render in the deployed site using common `src` linking:
+More than likely, images and/or videos will not render in the deployed site using common `src` linking:
 
 ```html
 <img src="./images/img.jpg" />
 ```
 
-Follow the steps below to fix this issue.
+Since the website is deployed under the [`homepage`](#2-add-a-homepage-property-to-the-packagejson-file) URL, it will not recognize the source file for the image or video using local pathing. To overcome this, follow the steps below to change all `src` linking, depending on the use case.
 
 1. Diagnose the type of media.
-
-   Since the website is deployed under the [`homepage`](#2-add-a-homepage-property-to-the-packagejson-file) URL, it will not recognize the source file for the image or video using local pathing. To overcome this, change all `src` linking depending on the use case.
 
    - _Background Image_
 
