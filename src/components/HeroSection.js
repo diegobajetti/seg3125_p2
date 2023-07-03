@@ -32,14 +32,14 @@ function HeroSection() {
           buttonStyle="btn--outline"
           buttonSize="btn--large"
         >
-          print('GET_STARTED')
+          print('GET STARTED')
         </Button>
         <Button
           className="btns"
           buttonStyle="btn--primary"
           buttonSize="btn--large"
         >
-          print('LEARN_MORE')
+          print('LEARN MORE')
           <FontAwesomeIcon
             icon={faPlayCircle}
             className="fa-play-circle"
