@@ -6,7 +6,11 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Challenges from "./components/pages/Challenges";
+import Discuss from "./components/pages/Discuss";
 import Home from "./components/pages/Home";
+import Lessons from "./components/pages/Lessons";
+import SignUp from "./components/pages/SignUp";
 
 function App() {
   return (
@@ -14,10 +18,10 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/" exact element={<Home />}></Route>
-        <Route path="/lessons" exact />
-        <Route path="/challenges" exact />
-        <Route path="/discuss" exact />
-        <Route path="/sign-up" exact />
+        <Route path="/lessons" exact element={<Lessons />}></Route>
+        <Route path="/challenges" exact element={<Challenges />}></Route>
+        <Route path="/discuss" exact element={<Discuss />}></Route>
+        <Route path="/sign-up" exact element={<SignUp />}></Route>
       </Switch>
     </Router>
   );
