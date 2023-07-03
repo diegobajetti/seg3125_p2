@@ -17,7 +17,7 @@ function Cards() {
             />
             <CardItem
               src="./seg3125_p2.github.io/images/img-5.jpg"
-              text="Working with Control Flow in Python (Conditional Statements, Loops)"
+              text="Working with Control Flow in Python (Conditional Statements and Loops)"
               label="Amateur"
               path="/services"
             />
@@ -31,7 +31,7 @@ function Cards() {
             />
             <CardItem
               src="./seg3125_p2.github.io/images/img-2.jpg"
-              text="Advanced Python Libraries and Frameworks (NumPy, Django)"
+              text="Advanced Python Libraries and Frameworks (NumPy and Django)"
               label="Advanced"
               path="/products"
             />
