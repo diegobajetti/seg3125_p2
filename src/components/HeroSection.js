@@ -15,7 +15,7 @@ function HeroSection() {
   return (
     <div className="hero-container">
       <video
-        src={"./seg3125_p2.github.io/videos/video-0.mp4"}
+        src={"./seg3125_p2.github.io/videos/video-1.mp4"}
         autoPlay="autoPlay"
         loop="loop"
         muted="muted"

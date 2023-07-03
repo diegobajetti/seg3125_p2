@@ -36,12 +36,6 @@
   font-size: 100px;
 }
 
-@media screen and (max-width: 960px) {
-  .challenges {
-    font-size: 60px;
-  }
-}
-
 .discuss {
   background-image: url("https://diegobajetti.github.io/seg3125_p2.github.io/images/img-3.jpg");
   background-position: center;
@@ -58,4 +52,14 @@
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+}
+
+@media screen and (max-width: 960px) {
+  .home,
+  .lessons,
+  .challenges,
+  .discuss,
+  .sign-up {
+    font-size: 60px;
+  }
 }
