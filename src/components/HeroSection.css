@@ -33,7 +33,7 @@ span {
 }
 
 .hero-btns {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .hero-btns .btn {
@@ -49,6 +49,11 @@ span {
     font-size: 70px;
     margin-top: -150px;
   }
+
+  .hero-container > p,
+  span {
+    font-size: 26px;
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -62,6 +67,10 @@ span {
     font-size: 20px;
   }
 
+  .hero-btns {
+    margin-top: 14px;
+  }
+
   .btn-mobile {
     display: block;
     text-decoration: none;
@@ -69,5 +78,23 @@ span {
 
   .btn {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .hero-container > p,
+  span {
+    font-size: 15px;
+  }
+
+  .hero-btns {
+    margin-top: 12px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .hero-container > p,
+  span {
+    font-size: 10px;
   }
 }

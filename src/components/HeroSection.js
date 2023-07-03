@@ -19,6 +19,7 @@ function HeroSection() {
         autoPlay="autoPlay"
         loop="loop"
         muted="muted"
+        playsInline="playsInline"
       />
       <h1>PyCodeX</h1>
       <p>
