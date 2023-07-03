@@ -6,8 +6,9 @@
 }
 
 .home,
-.services,
-.products,
+.lessons,
+.challenges,
+.discuss,
 .sign-up {
   display: flex;
   height: 90vh;
