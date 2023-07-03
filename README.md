@@ -120,26 +120,26 @@ Since the website is deployed under the [`homepage`](#2-add-a-homepage-property-
 
         > The `src` attribute's value should follow this format: `{"./<repo_name>/<file_path>"}`
 
-     Alternatively, run the following two commands to match the three cases above:
+   Alternatively, run the following two commands to match the three cases above:
 
-     ```sh
-     cd $(git rev-parse --show-cdup)/src
-     ```
+   ```sh
+   cd $(git rev-parse --show-cdup)/src
+   ```
 
-     ```sh
-     grep -RIlxP --exclude=\*.{json,md} --include=\*.{html,css,js} '^.*\b(?:src=|background\-image:).*$'
-     ```
+   ```sh
+   grep -RIlxP --exclude=\*.{json,md} --include=\*.{html,css,js} '^.*\b(?:src=|background\-image:).*$'
+   ```
 
-     `grep` is a utility for searching strings through multiple text files. Here, it is invoked with the following parameters:
+   `grep` is a utility for searching strings through multiple text files. Here, it is invoked with the following parameters:
 
-     - `R` — reads all files under each directory, recursively, across all symbolic links
-     - `I` — ignore binary files; process a binary file as if it did not contain matching data
-     - `l` — print the name of each file for which a match was found
-     - `x` — select only those matches that exactly match the whole line
-     - `P` — interpret patterns as Perl-compatible regular expressions (PCREs)
-     - `--exclude=` — skip any command-line file with a name suffix that matches the pattern
-     - `--include=` — search only files whose base name matches the pattern
-     - Regex — find an explanation for the regular expression [here][regex-example]
+   - `R` — reads all files under each directory, recursively, across all symbolic links
+   - `I` — ignore binary files; process a binary file as if it did not contain matching data
+   - `l` — print the name of each file for which a match was found
+   - `x` — select only those matches that exactly match the whole line
+   - `P` — interpret patterns as Perl-compatible regular expressions (PCREs)
+   - `--exclude=` — skip any command-line file with a name suffix that matches the pattern
+   - `--include=` — search only files whose base name matches the pattern
+   - Regex — find an explanation for the regular expression [here][regex-example]
 
 1. Create a `.env` file
 
