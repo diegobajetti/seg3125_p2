@@ -10,33 +10,33 @@ function Cards() {
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src="images/img-1.jpg"
+              src="./images/img-1.jpg"
               text="Introduction to Python Syntax and Variables"
               label="Beginner"
               path="/services"
             />
             <CardItem
-              src="images/img-5.jpg"
-              text="Working with Control Flow in Python (Conditional Statements and Loops)"
+              src="./images/img-5.jpg"
+              text="Working with Control Flow in Python (Conditional Statements, Loops)"
               label="Amateur"
               path="/services"
             />
           </ul>
           <ul className="cards__items">
             <CardItem
-              src="images/img-3.jpg"
+              src="./images/img-3.jpg"
               text="Object-Oriented Programming in Python"
               label="Intermediate"
               path="/services"
             />
             <CardItem
-              src="images/img-2.jpg"
-              text="Advanced Python Libraries and Frameworks (NumPy and Django)"
+              src="./images/img-2.jpg"
+              text="Advanced Python Libraries and Frameworks (NumPy, Django)"
               label="Advanced"
               path="/products"
             />
             <CardItem
-              src="images/img-4.jpg"
+              src="./images/img-4.jpg"
               text="Design Patterns and Best Practices in Python"
               label="Expert"
               path="/sign-up"

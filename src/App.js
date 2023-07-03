@@ -3,7 +3,7 @@ import {
   Route,
   BrowserRouter as Router,
   Routes as Switch,
-} from "react-router-dom";
+} from "react-router-dom/dist/index.js";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Challenges from "./components/pages/Challenges";
