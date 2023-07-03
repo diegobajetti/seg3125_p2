@@ -1,6 +1,7 @@
 {
   "name": "seg3125_p2.github.io",
   "version": "0.1.0",
+  "homepage": "http://diegobajetti.github.io/seg3125_p2.github.io",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",

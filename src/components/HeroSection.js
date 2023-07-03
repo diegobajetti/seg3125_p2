@@ -15,7 +15,7 @@ function HeroSection() {
   return (
     <div className="hero-container">
       <video
-        src={"./videos/video-0.mp4"}
+        src={"./seg3125_p2.github.io/videos/video-0.mp4"}
         autoPlay="autoPlay"
         loop="loop"
         muted="muted"
@@ -31,14 +31,14 @@ function HeroSection() {
           buttonStyle="btn--outline"
           buttonSize="btn--large"
         >
-          print('GET STARTED')
+          print('GET_STARTED')
         </Button>
         <Button
           className="btns"
           buttonStyle="btn--primary"
           buttonSize="btn--large"
         >
-          print('LEARN MORE')
+          print('LEARN_MORE')
           <FontAwesomeIcon
             icon={faPlayCircle}
             className="fa-play-circle"

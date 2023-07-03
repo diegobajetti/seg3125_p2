@@ -19,7 +19,7 @@
 }
 
 .lessons {
-  background-image: url("/images/img-1.jpg");
+  background-image: url("https://diegobajetti.github.io/seg3125_p2.github.io/images/img-1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@
 }
 
 .challenges {
-  background-image: url("/images/img-2.jpg");
+  background-image: url("https://diegobajetti.github.io/seg3125_p2.github.io/images/img-2.jpg");
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@
 }
 
 .discuss {
-  background-image: url("/images/img-3.jpg");
+  background-image: url("https://diegobajetti.github.io/seg3125_p2.github.io/images/img-3.jpg");
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@
 }
 
 .sign-up {
-  background-image: url("/images/img-4.jpg");
+  background-image: url("https://diegobajetti.github.io/seg3125_p2.github.io/images/img-4.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
