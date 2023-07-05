@@ -1,5 +1,7 @@
 # — PyCodeX —
 
+![](https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/public/images/gif-1.gif)
+
 This repository uses the [`gh-pages`][gh-pages] `npm` package to build and deploy a React application. See a live, interactive version of the website [here][live-website].
 
 ## Getting Started: [`gh-pages`][gh-pages]
@@ -71,7 +73,7 @@ The [`gh-pages`][gh-pages] package will deploy the application to the specified 
 
 ### `README.md` file as website
 
-On the first deployment of the app, the package builds the site based on the default GitHub Pages configuration. GitHub Pages displays the site by parsing the target branch (`master` by default) and identifying a source file (e.g., `index.html`, `index.md`, or `README.md`<sup>&#91;[1][github-pages-doc]&#93;</sup>). Upon creating a React app with the `npx create-react-app` command, a `README.md` file is generated and, consequently, regarded as the source file for the site. The `gh-pages` branch is available _after_ the application is built for the first time, and only then the GitHub Pages configuration can be changed in order to display the correct site. After completing step [5](#5-configure-github-pages) above, deploy the application against the `gh-pages` branch.
+On the first deployment of the app, the package builds the site based on the default GitHub Pages configuration. GitHub Pages displays the site by parsing the target branch (`master` by default) and identifying a source file (e.g., `index.html`, `index.md`, or `README.md`<sup>&#91;[1][github-pages-doc]&#93;</sup>). Upon creating a React app with the `npx create-react-app` command, a `README.md` file is generated and, consequently, regarded as the source file for the site. The `gh-pages` branch is available _after_ the application is built for the first time, and only then the GitHub Pages configuration can be changed in order to display the correct site. After completing step [five](#5-configure-github-pages) above, deploy the application against the `gh-pages` branch.
 
 ### Broken Media Display
 
@@ -127,7 +129,7 @@ Since the website is deployed under the [`homepage`](#2-add-a-homepage-property-
    ```
 
    ```sh
-   grep -RIlxP --exclude=\*.{json,md} --include=\*.{html,css,js} '^.*\b(?:src=|background\-image:).*$'
+   grep -RIlxP --include=\*.{html,css,js} '^.*\b(?:src=|background\-image:).*$'
    ```
 
    `grep` is a utility for searching strings through multiple text files. Here, it is invoked with the following parameters:
@@ -137,7 +139,6 @@ Since the website is deployed under the [`homepage`](#2-add-a-homepage-property-
    - `l` — print the name of each file for which a match was found
    - `x` — select only those matches that exactly match the whole line
    - `P` — interpret patterns as Perl-compatible regular expressions (PCREs)
-   - `--exclude=` — skip any command-line file with a name suffix that matches the pattern
    - `--include=` — search only files whose base name matches the pattern
    - Regex — find an explanation for the regular expression [here][regex-example]
 
@@ -164,10 +165,10 @@ Since the website is deployed under the [`homepage`](#2-add-a-homepage-property-
 Push these changes to the remote repository and [deploy](#4-deploy-the-react-app) the application. This is not a foolproof method as it requires any `img` and `video` tags to be changed back in order to render the images when running locally. Additionally, it is **important** that these changes are not pushed to the remote repository, and to reference the external repository _before_ [deploying](#4-deploy-the-react-app). That is, change all references to image/video files anytime the application is deployed to the remote as shown above, and back to their original values when running locally.
 
 [live-website]: https://diegobajetti.github.io/seg3125_p2.github.io/
-[gh-pages]: https://www.npmjs.com/package/gh-pages
+[gh-pages]: https://github.com/gitname/react-gh-pages
 [package-json-homepage]: https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/package.json#L4
-[package-json-predeploy]: https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/package.json#L24
-[package-json-deploy]: https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/package.json#L25
+[package-json-predeploy]: https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/package.json#L25
+[package-json-deploy]: https://github.com/diegobajetti/seg3125_p2.github.io/blob/master/package.json#L26
 [github-action]: https://github.com/diegobajetti/seg3125_p2.github.io/actions
 [github-pages-doc]: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site
 [regex-example]: https://regex101.com/r/iUYcBT/1
